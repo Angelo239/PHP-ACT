@@ -1,10 +1,14 @@
+<?php
+$pageTitle = "Login";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login</title>
+    <title><?php echo $pageTitle; ?></title>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -85,7 +89,7 @@
 
             <p class="register">
                 Don't have an account?
-                <a href="register.html">Register Here</a>
+                <a href="register.php">Register Here</a>
             </p>
 
         </form>
@@ -144,15 +148,12 @@
                 errorClass: "error",
                 validClass: "valid",
 
-                // Put validation errors after their input
                 errorPlacement: function (error, element) {
                     error.insertAfter(element);
                 },
 
-                // Runs when the form passes validation
                 submitHandler: function (form) {
 
-                    // Stop login if maximum attempts have been reached
                     if (failedAttempts >= maxAttempts) {
                         return false;
                     }
@@ -170,8 +171,8 @@
                             .css("color", "green")
                             .text("Login successful! Redirecting...");
 
-                        // Redirect after successful login
-                        window.location.href = "landing.html";
+                        // Redirect to the landing page
+                        window.location.href = "landing.php";
 
                         return false;
                     }
@@ -182,13 +183,9 @@
                     const remainingAttempts =
                         maxAttempts - failedAttempts;
 
-                    // Maximum attempts reached
                     if (failedAttempts >= maxAttempts) {
 
                         loginButton.prop("disabled", true);
-
-                        loginButton.text("Login");
-
                         loginButton.addClass("locked");
 
                         loginMessage
@@ -219,4 +216,3 @@
 
 </body>
 </html>
-

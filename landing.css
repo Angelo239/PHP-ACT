@@ -50,12 +50,15 @@ h3 {
     align-items: center;
 
     background-image:
-        linear-gradient(rgba(0, 0, 0, .45),
-        rgba(0, 0, 0, .65)),
-        url("tattoine.png");
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("/myprojects/images/tattoine.png");
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     padding-top: 80px;
 }
 
@@ -88,13 +91,15 @@ h3 {
     align-items: center;
 
     background-image:
-        linear-gradient(rgba(0, 0, 0, .72),
-        rgba(0, 0, 0, .72)),
-        url("avsd.png");
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("/myprojects/images/avsd.png");
 
     background-size: cover;
     background-position: center;
-
+    background-repeat: no-repeat;
     padding: 100px 0;
 }
 
@@ -120,13 +125,15 @@ h3 {
     min-height: 100vh;
 
     background-image:
-        linear-gradient(rgba(0, 0, 0, .78),
-        rgba(0, 0, 0, .85)),
-        url("stars.png");
+        linear-gradient(
+            rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("/myprojects/images/stars.png");
 
     background-size: cover;
     background-position: center;
-
+    background-repeat: no-repeat;
     padding: 100px 0;
 }
 
@@ -138,11 +145,11 @@ h3 {
 /* MOVIE CARDS */
 
 .movie-card {
-    background: rgba(20, 20, 20, .9);
+    background: rgba(20, 20, 20, 0.9);
     color: white;
     border: 1px solid #555;
     border-radius: 8px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .movie-card:hover {
@@ -207,7 +214,6 @@ footer a {
 /* TABLET */
 
 @media (max-width: 768px) {
-
     .hero-section {
         min-height: 90vh;
         text-align: center;
@@ -236,7 +242,6 @@ footer a {
 /* PHONE */
 
 @media (max-width: 576px) {
-
     .hero-section {
         padding: 100px 20px 60px;
     }

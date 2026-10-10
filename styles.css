@@ -12,12 +12,18 @@ body {
     padding: 20px;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: url("dssw.png") center/cover fixed no-repeat;
+
+    background-image: url("/myprojects/images/dssw.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 /* LOGIN AND REGISTER BOXES */
 
